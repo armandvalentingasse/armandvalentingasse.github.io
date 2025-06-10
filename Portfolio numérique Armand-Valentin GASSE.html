@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Portfolio numérique Armand-Valentin GASSE</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="bandeau">
+        <h1>Bienvenue</h1>
+        <nav class="nav-links">
+            <a href="#apropos">A propos de moi</a>
+            <a href="#projets">Mes projets</a>
+            <a href="#bilan">Mon bilan</a>
+            <a href="#cv">Mon CV</a>
+            <a href="#contact">Me contacter</a>
+        </nav>
+    </header>
+
+    <section id="apropos" class="partie">
+        <h2 class="titre-section">A propos de moi</h2>
+        <div class="contenu-section">
+            <img src="./Photos/photo GASSE AV.jpg" alt="Ma photo" />
+            <div class="texte-droite">
+                <p>Je m'appelle Armand-Valentin GASSE, j'ai 18 ans, et j'ai étudié au lycée Saint-André à Niort, où j'ai choisi les spécialités mathématiques et physique-chimie en Terminale. <br>
+    Aujourd'hui, je suis étudiant à l'IUT de Poitiers sur le site de Niort. Ma formation est basée sur la science des données. Ainsi, je suis en capacité de rechercher et de sélectionner des données ainsi que de les exploiter et les valoriser par exemple à travers des interfaces graphiques. Je suis donc en mesure d'extraire des informations pertinentes afin d'aider à prendre les décisions les plus efficientes.<br>
+    Je suis une personne curieuse, organisé, rigoureuse, j'ai un bon esprit de synthèse ainsi qu'une forte aisance rédactionnelle, et je n'abandonne jamais, car j'approuve une grande citation de Georges Clémenceau qui disait : "Il n'y a qu'une façon d'échouer, c'est d'abandonner avant d'avoir réussi". Je pense très souvent à cette citation, notamment quand je rechigne une tâche que je viens de commencer.<br>
+    Par ailleurs, je suis passionné d'échecs, et de mots fléchés, et je m'intéresse beaucoup à tout ce qui est afférent à l'astronomie. </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="partie">
+        <h2 class="titre-section">Mes projets</h2>
+        <div class="contenu-section">
+            <div class="texte-gauche">
+                <label for="select-annee">Choisissez une année :</label>
+                <select id="select-annee" onchange="afficherProjets(this.value)">
+                    <option value="">-- Sélectionnez --</option>
+                    <option value="annee1">Projets de 1re année</option>
+                    <option value="annee2">Projets de 2e année</option>
+                    <option value="annee3">Projets de 3e année</option>
+                </select>
+            </div>
+
+            <div id="projets-annee1" class="conteneur-projets" style="display: none;">
+                <!-- Projet 1 -->
+            <div class="zone-projet zone-bleu-clair">
+                <div class="col-gauche">
+                    <p class="haut">Projet 1 : Reporting à partir de données stockées dans un SGBD relationnel</p>
+                    <p class="milieu">Objectifs :<br>
+                        – Amener l'étudiant à construire des indicateurs de performance ainsi que les restituer sous forme de tableau de bord <br>
+                        – Identifier les besoins clients et être force de proposition pour s'adapter à ces besoins <br>
+                        – Se confronter à des difficultés dans les bases de données rencontrées</p>
+                    <p class="bas">Apprentissages critiques : <br>
+                        – AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client<br>
+                        – AC11.02 | Respecter les formalismes de notation <br>
+                        – AC11.03 | Connaître la syntaxe des langages et savoir l'utiliser<br>
+                        – AC11.04 | Mesurer l'importance de maîtriser la structure des données à exploiter</p>
+                </div>
+                <div class="col-droite">
+                    <img src="./Photos/SAE_VBA.png" alt="Projet 1" />
+                    <a href="./Projets/SAE Excel VBA - Version finale.xlsm" download>Télécharger le fichier</a>
+                </div>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="zone-projet zone-bleu-fonce">
+                <div class="col-gauche">
+                    <p class="haut">Projet 2 : Ecriture et lecture de fichiers de données</p>
+                    <p class="milieu">Objectifs :<br>
+                        – Initier l'étudiant au besoin de respecter des spécifications fournies pour garantir l'interopérabilité avec un programme existant<br>
+                        – L'amener à la conception et au développement d'un programme permettant de traiter un flux de données (lecture, transformation, écriture) dans le respect de ces spécifications</p>
+                    <p class="bas">Apprentissages critiques : <br>
+                        – AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client<br>
+                        – AC11.02 | Respecter les formalismes de notation<br>
+                        – AC11.03 | Connaître la syntaxe des langages et savoir l'utiliser<br>
+                        – AC11.04 | Mesurer l'importance de maîtriser la structure des données à exploiter<br>
+                        – AC11.05 | Comprendre les structures algorithmiques de base et leur contexte d'usage<br>
+                        – AC11.06 | Prendre conscience de l'intérêt de la programmation</p>
+                </div>
+                <div class="col-droite">
+                    <img src="./Photos/SAE_JsontoCsv.png" alt="Projet 2" />
+                    <a href="./Projets/transformerJsonToCsv.py" download>Télécharger le fichier</a>
+                </div>
+            </div>
+
+            <!-- Projet 3 -->
+            <div class="zone-projet zone-bleu-normal">
+                <div class="col-gauche">
+                    <p class="haut">Projet 3 :  Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire simple</p>
+                    <p class="milieu">Objectifs :<br>
+                        – Faire comprendre à l'étudiant les mécanismes qui sous-tendent la construction des tableaux et des graphiques, pour l'analyse des données<br>
+                        – Le sensibiliser à l'importance de l'appropriation de la donnée et de sa préparation en amont de l'analyse<br>
+                        – Lui faire comprendre que l'exploration simple des données doit être un préalable à tout travail statistique</p>
+                    <p class="bas">Apprentissages critiques : <br>
+                        – AC12.01 | Réaliser que les sources de données ont des caractéristiques propres à considérer (variation, précision, mise à jour...)<br>
+                        – AC12.02 | Comprendre qu'une analyse correcte ne peut émaner que de données propres et préparées<br>
+                        – AC12.03 | Comprendre l'intérêt des synthèses numériques et graphiques pour décrire une variable statistique<br>
+                        – AC12.04 | Comprendre l'intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables</p>
+                </div>
+                <div class="col-droite">
+                    <img src="./Photos/SAE_Prep_Anal_Exp_Simple.png" alt="Projet 3" />
+                    <a href="./Projets/SAE - Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire simple/Tableau de bord.docx" download>Télécharger le fichier</a>
+                </div>
+            </div>
+
+            <!-- Projet 4 -->
+            <div class="zone-projet zone-bleu-fonce">
+                <div class="col-gauche">
+                    <p class="haut">Projet 4 : Apprendre en situation la production de données en entreprise</p>
+                    <p class="milieu">Objectifs :<br>
+                        – Mettre l'étudiant dans un contexte professionnel<br>
+                        – Identifier les mécanismes de production de données et leur utilisation dans l'environnement socio-économique</p>
+                    <p class="bas">Apprentissages critiques : <br>
+                        – AC13.02 | Identifier l'importance de contextualiser ses données<br>
+                        – AC13.03 | Mesurer l'importance de mettre en évidence des résultats clés par l'utilisation d'indicateurs pertinents<br>
+                        – AC13.04 | Lors de la restitution des résultats, mesurer l'importance d'expliciter également la démarche suivie</p>
+                </div>
+                <div class="col-droite">
+                    <img src="./Photos/SAE_87.png" alt="Projet 4" />
+                    <a href="./Projets/Compte-Rendu 87 en PDF.pdf" download>Télécharger le fichier</a>
+                </div>
+            </div>
+
+            <!-- Projet 5 -->
+            <div class="zone-projet zone-bleu-clair">
+                <div class="col-gauche">
+                    <p class="haut">Projet 5 : Présentation en anglais d'un territoire économique et culturel</p>
+                    <p class="milieu">Objectifs :<br>
+                        – Amener l'étudiant à rechercher des données caractérisant un territoire <br>
+                        – Lui faire comprendre et identifier les informations essentielles<br>
+                        – L'amener à proposer une synthèse des indicateurs clés et restituer cette information<br>
+                        – Le guider dans l'appropriation des termes anglais pour parler des métiers dans le cadre d'une présentation</p>
+                    <p class="bas">Apprentissages critiques : <br>
+                        – AC13.04 | Lors de la restitution des résultats, mesurer l'importance d'expliciter également la démarche suivie<br>
+                        – AC13.06 | Mesurer l'importance d'une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats</p>
+                </div>
+                <div class="col-droite">
+                    <img src="./Photos/SAE_JO.png" alt="Projet 5" />
+                    <a href="./Projets/SAE Territoire.pptx" download>Télécharger le fichier</a>
+                </div>
+            </div>
+
+            <!-- Projet 6 -->
+            <div class="zone-projet zone-bleu-normal">
+                <div class="col-gauche">
+                    <p class="haut">Projet 6 : Mise en oeuvre d'une enquête
+    </p>
+                    <p class="milieu">Objectifs :<br>
+                        – Former les étudiants à la construction d'une enquête<br>
+                        – Les initier aux biais liés à la formulation d'une question<br>
+                        – Leur faire percevoir les enjeux d'une collecte de réponses bien menée pour obtenir des données fiables et exploitables<br>
+                        – Comprendre les spécificités de la donnée issue d'une enquête</p>
+                    <p class="bas">Apprentissages critiques : <br>
+                        – AC13.01 | Prendre connaissance des biais rencontrés dans la mise en place d'une enquête<br>
+                        – AC13.02 | Identifier l'importance de contextualiser ses données<br>
+                        – AC13.04 | Lors de la restitution des résultats, mesurer l'importance d'expliciter également la démarche suivie<br>
+                        – AC13.05 | Comprendre les intérêts de la data visualisation et de l'infographie<br>
+                        – AC13.06 | Mesurer l'importance d'une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats </p>
+                </div>
+                <div class="col-droite">
+                    <a href="./Projets/LeRUetlerepasdemididesetudiantsniortaisdel'IUT.sphd" download>Télécharger le fichier Sphinx</a>
+                </div>
+            </div>
+
+            <!-- Projet 7 -->
+            <div class="zone-projet zone-bleu-fonce">
+                <div class="col-gauche">
+                    <p class="haut">Projet 7 : Conception et implémentation d'une base de données</p>
+                    <p class="milieu">Objectifs :<br>
+                        – Engager l'étudiant dans une démarche de création d'une base de données relationnelle<br>
+                        – Lui faire comprendre que cette démarche implique toutes les étapes d'analyse des besoins, modélisation, implémentation, alimentation, validation, documentation</p>
+                    <p class="bas">Apprentissages critiques : <br>
+                        – AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client
+                        – AC11.02 | Respecter les formalismes de notation<br>
+                        – AC11.03 | Connaître la syntaxe des langages et savoir l'utiliser<br>
+                        – AC11.04 | Mesurer l'importance de maîtriser la structure des données à exploiter<br>
+                        – AC11.05 | Comprendre les structures algorithmiques de base et leur contexte d'usage<br>
+                        – AC11.06 | Prendre conscience de l'intérêt de la programmation</p>
+                </div>
+                <div class="col-droite">
+                    <img src="./Photos/SAE_BDR.png" alt="Projet 7" />
+                    <a href="./Projets/selmarin_ihm.py" download>Télécharger le fichier</a>
+                </div>
+            </div>
+
+            <!-- Projet 8 -->
+            <div class="zone-projet zone-bleu-clair">
+                <div class="col-gauche">
+                    <p class="haut">Projet 8 : Estimation par échantillonnage</p>
+                    <p class="milieu">Objectifs :<br>
+                        – Permettre à l'étudiant d'intégrer la différence entre un échantillon et une population<br>
+                        – Lui faire percevoir le besoin d'intégrer la fluctuation d'échantillonnage dans l'analyse d'une population<br>
+                        – L'initier à la problématique des sondages</p>
+                    <p class="bas">Apprentissages critiques : <br>
+                        – AC12.01 | Réaliser que les sources de données ont des caractéristiques propres à considérer (variation, précision, mise à jour...)<br>
+                        – AC12.02 | Comprendre qu'une analyse correcte ne peut émaner que de données propres et préparées<br>
+                        – AC12.05 | Comprendre l'intérêt de l'utilisation d'un modèle probabiliste<br>
+                        – AC12.06 | Appréhender la notion de fluctuation d'échantillonnage, notamment à l'aide de simulations probabilistes</p>
+                </div>
+                <div class="col-droite">
+                    <img src="./Photos/SAE_Estim_Echant.png" alt="Projet 8" />
+                    <a href="./Projets/Rapport SAE GASSE Armand-Valentin BENOIT Nathael.pdf" download>Télécharger le fichier</a>
+                </div>
+            </div>
+
+            <!-- Projet 9 -->
+            <div class="zone-projet zone-bleu-normal">
+                <div class="col-gauche">
+                    <p class="haut">Projet 9 : Régression sur données réelles</p>
+                    <p class="milieu">Objectifs :<br>
+                        – Amener l'étudiant à percevoir les spécificités et les difficultés des données réelles<br>
+                        – Lui faire comprendre la notion de liaison entre deux variables quantitatives pour répondre à une problématique métier<br>
+                        – Mesurer l'apport des représentations graphiques dans la visualisation de cette liaison</p>
+                    <p class="bas">Apprentissages critiques : <br>
+                        – AC12.03 | Comprendre l'intérêt des synthèses numériques et graphiques pour décrire une variable statistique<br>
+                        – AC12.04 | Comprendre l'intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables</p>
+                </div>
+                <div class="col-droite">
+                    <img src="./Photos/SAE_Regression.png" alt="Projet 9" />
+                    <a href="./Projets/Text SAE Régression sur des données réelles.pdf" download>Télécharger le fichier</a>
+                </div>
+            </div>
+
+            <!-- Projet 10 -->
+            <div class="zone-projet zone-bleu-fonce">
+                <div class="col-gauche">
+                    <p class="haut">Projet 10 :  Datavisualisation</p>
+                    <p class="milieu">Objectifs :<br>
+                        – Amener l'étudiant à comprendre la démarche de valorisation des éléments clés d'un tableau de données par la représentation graphique<br>
+                        – Le conduire à choisir et construire des indicateurs synthétiques pertinents pour répondre à une problématique<br>
+                        – Savoir identifier les atouts et faiblesses des différentes représentations graphiques pour la visualisation des données</p>
+                    <p class="bas">Apprentissages critiques : <br>
+                        – AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client<br>
+                        – AC11.04 | Mesurer l'importance de maîtriser la structure des données à exploiter<br>
+                        – AC12.02 | Comprendre qu'une analyse correcte ne peut émaner que de données propres et préparées<br>
+                        – AC12.03 | Comprendre l'intérêt des synthèses numériques et graphiques pour décrire une variable statistique<br>
+                        – AC12.04 | Comprendre l'intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables<br>
+                        – AC13.02 | Identifier l'importance de contextualiser ses données<br>
+                        – AC13.05 | Comprendre les intérêts de la data visualisation et de l'infographie<br>
+                        – AC13.06 | Mesurer l'importance d'une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats </p>
+                </div>
+                <div class="col-droite">
+                    <img src="./Photos/SAE_Dataviz.png" alt="Projet 10" />
+                    <a href="./Projets/Infographie concours Dataviz.jpg" download>Télécharger le fichier</a>
+                </div>
+            </div>
+
+            <!-- Projet 11 -->
+            <div class="zone-projet zone-bleu-clair">
+                <div class="col-gauche">
+                    <p class="haut">Projet 11 :  Construction et présentation d'indicateurs de performance</p>
+                    <p class="milieu">Objectifs :<br>
+                        – Amener l'étudiant à comprendre le rôle que joue la donnée pour le pilotage de l'activité en entreprise<br>
+                        – Mesurer la diversité des sources de données au sein de l'entreprise</p>
+                    <p class="bas">Apprentissages critiques : <br>
+                        – AC13.02 | Identifier l'importance de contextualiser ses données<br>
+                        – AC13.03 | Mesurer l'importance de mettre en évidence des résultats clés par l'utilisation d'indicateurs pertinents<br>
+                        – AC13.04 | Lors de la restitution des résultats, mesurer l'importance d'expliciter également la démarche suivie<br>
+                        – AC13.05 | Comprendre les intérêts de la data visualisation et de l'infographie
+    </p>
+                </div>
+                <div class="col-droite">
+                    <img src="./Photos/SAE_Indic.png" alt="Projet 11" />
+                    <a href="./Projets/SAE indicateurs de perfomance/SAE indicateur de performance VF.docx" download>Télécharger le fichier</a>
+                </div>
+            </div>
+
+            <!-- Projet 12 -->
+            <div class="zone-projet zone-bleu-normal">
+                <div class="col-gauche">
+                    <p class="haut">Projet 12 : Analyse de données, reporting et datavisualisation</p>
+                    <p class="milieu">Objectifs :<br>
+                        – Faire comprendre à l'étudiant l'interdisciplinarité de la statistique et de l'informatique décisionnelle<br>
+                        – L'initier à la conduite de projet et à la planification<br>
+                        – Le confronter à toutes les étapes d'un projet en science des données<br>
+                        – Lui faire prendre conscience des problématiques de confidentialité des données</p>
+                    <p class="bas">Apprentissages critiques : <br>
+                        – AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client<br>
+                        – AC11.02 | Respecter les formalismes de notation<br>
+                        – AC11.03 | Connaître la syntaxe des langages et savoir l'utiliser<br>
+                        – AC11.04 | Mesurer l'importance de maîtriser la structure des données à exploiter<br>
+                        – AC11.05 | Comprendre les structures algorithmiques de base et leur contexte d'usage<br>
+                        – AC11.06 | Prendre conscience de l'intérêt de la programmation<br>
+                        – AC12.01 | Réaliser que les sources de données ont des caractéristiques propres à considérer (variation, précision, mise à jour...)<br>
+                        – AC12.02 | Comprendre qu'une analyse correcte ne peut émaner que de données propres et préparées<br>
+                        – AC12.03 | Comprendre l'intérêt des synthèses numériques et graphiques pour décrire une variable statistique<br>
+                        – AC12.04 | Comprendre l'intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables<br>
+                        – AC12.05 | Comprendre l'intérêt de l'utilisation d'un modèle probabiliste<br>
+                        – AC12.06 | Appréhender la notion de fluctuation d'échantillonnage, notamment à l'aide de simulations probabilistes<br>
+                        – AC13.01 | Prendre connaissance des biais rencontrés dans la mise en place d'une enquête<br>
+                        – AC13.02 | Identifier l'importance de contextualiser ses données<br>
+                        – AC13.03 | Mesurer l'importance de mettre en évidence des résultats clés par l'utilisation d'indicateurs pertinents<br>
+                        – AC13.04 | Lors de la restitution des résultats, mesurer l'importance d'expliciter également la démarche suivie<br>
+                        – AC13.05 | Comprendre les intérêts de la data visualisation et de l'infographie<br>
+                        – AC13.06 | Mesurer l'importance d'une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats</p>
+                </div>
+                <div class="col-droite">
+                    <img src="./Photos/SAE_Finale.png" alt="Projet 12" />
+                    <a href="./Projets/Oral SAE finale.pptx" download>Télécharger le fichier</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    function afficherProjets(valeur) {
+        document.getElementById("projets-annee1").style.display = (valeur === "annee1") ? "block" : "none";
+        // Ajouter plus tard pour annee2, annee3
+    }
+    </script>
+
+    <section id="bilan" class="partie">
+        <h2 class="titre-section">Mon bilan</h2>
+        <div class="contenu-section">
+            <p>
+    Ce portfolio est l'occasion pour moi de revenir sur l'ensemble de ma première année universitaire : <br>
+    Pour commencer, la majorité de mes résultats scolaires sont dans la moyennne haute. Cependant ces derniers sont perfectibles : les matières où j'ai le moins bien réussi sont la programmation statistique avec le logiciel SAS, ainsi que certains des contrôles de programmation avec python. J'ai également quelques difficultés avec le logiciel R ainsi que dans la manipulation de librairies python servant à réaliser de la programmation statistique. <br>
+    Aussi, j'adore toutes les matières que l'on m'enseigne, elle m'intéresse grandement et me donne envie d'en apprendre davantage. Plus précisément, mes ressources préférées sont celles du bloc statistique, avec notamment les probabilités, l'algèbre et les statistiques descriptives et inférentielles, mais aussi les cours de gestion et d'économie. En effet, j'aime comprendre avec beaucoup d'intérêt le fonctionnement du monde économique, et concernant les cours de mathématiques, ils correspondent exactement à ce à quoi je m'attendais et à ce que j'aime réaliser, avec notamment un passage clé dans la réalisation des exercices qui est l'interprétation concrète des résultats calculés.<br>
+    Cependant, la communication, les projets personnels et professionnels, et l'anglais sont les matières que j'apprécie le moins, néanmoins j'ai bel et bien pris conscience qu'elles me sont et me seront utiles dans le futur, aussi bien dans le monde professionnel que dans la communication avec autrui. <br>
+    Par ailleurs, étant une personne rigoureuse et organisée, je suis très assidu dans mon travail. En effet, je travaille de telle sorte que j'écoute et participe activement aux différentes ressources, et je n'hésite pas à poser l'ensemble des questions qui me viennent en tête, afin de comprendre l'intégralité du cours. Ainsi, cela me permet de ne passer que quelques heures à la maison pour réviser les contrôles, et au regard de mes notes, je peux dire que cette méthode me permet de garder un bon rapport entre le travail réalisé et les résultats obtenus. Autre point positif, cette dernière me permet d'avoir confiance en mes capacités, ainsi que de faire disparaître quelconque situation de stress.<br>
+    Pour finir, je suis très heureux et altier de faire mes études dans le BUT Science des Données de l'IUT de Niort, qui est une formation qui me correspond parfaitement. Elle m'a permis d'acquérir durant cette année de nombreuses compétences en informatique et de me familiariser avec de nombreux outils technologiques, ainsi que de davantage connaître le monde économique et entrepreneurial. Elle m'a permis de mettre en pratique l'ensemble des cours théoriques qui me sont inculqués à travers de nombreux projets universitaires, me permettant d'avoir un environnement proche de celui du monde de l'entreprise, d'autant que la majeure partie de ces projets sont à réaliser en groupe, me permettant ainsi de m'adapter et de travailler avec des personnes qui ont toutes des profils différents. De plus, ces projets universitaires m'ont permis de me sociabiliser avec davantage d'étudiants de ma promo, moi qui suis pourtant d'un caractère timide. <br>
+    Je suis donc très satisfait de cette année universitaire, et j'espère continuer de m'épanouir dans cette formation, dans laquelle les professeurs sont bienveillants et à l'écoute de tous les étudiants. Finalement, cette année scolaire 2024-2025 peut se résumer pour moi en quatre mots : investissement, plaisir, entraide et concrétisation. </p>
+        </div>
+    </section>
+
+    <section id="cv" class="partie">
+        <h2 class="titre-section">Mon CV</h2>
+        <div class="contenu-section section-gauche">
+            <p>Retrouvez mon Curriculum Vitae en cliquant juste ici :</p>
+            <a href="./CV/CV Armand Valentin GASSE.pdf" download>Télécharger mon CV</a>
+        </div>
+    </section>
+
+    <section id="contact" class="partie">
+        <h2 class="titre-section">Me contacter</h2>
+        <div class="contenu-section section-gauche">
+            <ul>
+                <li>Adresse email : armandvalentin.gasse@laposte.net</li>
+                <li>Téléphone : 06 71 24 35 31</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

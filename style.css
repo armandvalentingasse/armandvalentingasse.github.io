@@ -1,0 +1,342 @@
+/* Défilement fluide */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Arrière-plan sans dégradé - couleur unie */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #003366;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Bandeau en haut */
+.bandeau {
+    background-color: #003366;
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    border-bottom: 2px solid #3399ff;
+    position: relative;
+}
+
+.nav-links {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Style des sections */
+.partie {
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Alternance de fond (garde le style original) */
+.partie:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+/* Alternance couleurs pour sections spécifiques */
+#apropos { 
+    background-color: #001f3f !important; 
+    position: relative;
+}
+#bilan { 
+    background-color: #3399ff !important; 
+    position: relative;
+}
+#cv { 
+    background-color: #001f3f !important; 
+    position: relative;
+}
+#contact { 
+    background-color: #cce6ff !important; 
+    color: #000 !important;
+    position: relative;
+}
+
+/* Gros titres pour sections spécifiques */
+#apropos .titre-section,
+#bilan .titre-section,
+#cv .titre-section,
+#contact .titre-section {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0;
+    padding: 0;
+}
+
+/* Titre spécial pour projets - à gauche, gras, gros et souligné */
+#projets .titre-section {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: underline;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+/* Contenu décalé pour sections spécifiques */
+#apropos .contenu-section,
+#bilan .contenu-section,
+#cv .contenu-section,
+#contact .contenu-section {
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Image à gauche dans A propos */
+.contenu-section img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Texte à droite */
+.texte-droite, .texte-gauche {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Sections CV et Contact alignées à gauche */
+.section-gauche {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.section-gauche p,
+.section-gauche ul {
+    margin: 0;
+    padding: 0;
+}
+
+.section-gauche ul {
+    list-style-type: none;
+}
+
+.section-gauche li {
+    margin-bottom: 10px;
+}
+
+/* Photos à droite pour Partie 2 */
+.photos-droite {
+    display: flex;
+    gap: 10px;
+}
+
+.photos-droite img {
+    width: 100px;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* Pied de page */
+footer {
+    clear: both;
+    padding: 2em;
+    background: dimgray;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ============ NOUVELLE SECTION : PROJETS PAR ANNÉE ============ */
+
+#projets {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+.liste-annees {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.liste-annees select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+.conteneur-projets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Bloc de projet pleine largeur */
+.zone-projet {
+    width: 100vw;
+    margin-left: calc(-1 * (100vw - 100%) / 2);
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-radius: 0;
+}
+
+/* Couleurs alternées pour les projets */
+.zone-bleu-clair {
+    background-color: #cce6ff;
+    color: #000;
+}
+
+.zone-bleu-fonce {
+    background-color: #001f3f;
+    color: #fff;
+}
+
+.zone-bleu-normal {
+    background-color: #3399ff;
+    color: #fff;
+}
+
+/* Colonnes de chaque projet */
+.col-gauche, .col-droite {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+}
+
+.col-gauche p {
+    margin: 5px 0;
+}
+
+.col-gauche .haut {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.col-gauche .milieu {
+    font-style: italic;
+}
+
+.col-gauche .bas {
+    font-size: 0.9em;
+    color: #f0f0f0;
+}
+
+.zone-bleu-clair .col-gauche .bas {
+    color: #333;
+}
+
+/* Colonne droite avec image et bouton en dessous */
+.col-droite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.col-droite img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 2px solid white;
+}
+
+/* Bouton de téléchargement en vert */
+.col-droite a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #228B22; /* vert normal */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.col-droite a:hover {
+    background-color: #1e7b1e;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .zone-projet {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .col-droite {
+        text-align: left;
+    }
+
+    .nav-links {
+        position: static;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .bandeau {
+        text-align: center;
+    }
+    
+    /* Responsive pour les nouveaux titres */
+    #apropos .titre-section,
+    #bilan .titre-section,
+    #cv .titre-section,
+    #contact .titre-section {
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    #projets .titre-section {
+        font-size: 2em;
+        font-weight: bold;
+        text-align: left;
+        text-decoration: underline;
+        margin-bottom: 20px;
+    }
+
+    #apropos .contenu-section,
+    #bilan .contenu-section,
+    #cv .contenu-section,
+    #contact .contenu-section {
+        margin-top: 20px;
+    }
+}
